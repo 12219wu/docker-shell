@@ -1,0 +1,5 @@
+1、执行sh publish-all.sh即可发布脚本容器部署，一共1个mysql的容器、6个go的容器。
+2、publish-all.sh脚本里包含两个脚本的部署：publish-mysql.sh与publish-go-service.sh。
+3、publish-mysql.sh先运行一个mysql的容器脚本run-mysql.sh，此时容器数据库后台运行，一直在进行初始化，
+这个过程大约会执行一分钟，所以在publish-mysql.sh后面加上循环一直等到可以正常在容器中建立数据库。
+4、publish-go-service.sh建立go的六个容器的脚本，建立容器之后，在容器中执行run-publish-wy.sh脚本。

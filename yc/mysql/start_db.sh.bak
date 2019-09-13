@@ -1,0 +1,11 @@
+#启动数据库 
+usermod -d /var/lib/mysql/ mysql
+chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
+service mysql restart
+
+
+
+
+
+# 阻塞
+tail -f /dev/null
